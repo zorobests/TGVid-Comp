@@ -40,7 +40,6 @@ async def zylern(event):
 /renew - __Clear Cached Downloads__
 /clear - __Clear Queued Files__
 /showthumb - __Show Current Thumbnail__
-/speed - __Do A SpeedTest__
 /eval - __Execute An Argument__
 /bash - __Run Bash Commands__
 /cmds - __List Available Commands__
