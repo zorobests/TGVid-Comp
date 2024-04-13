@@ -98,23 +98,6 @@ async def progress(current, total, event, start, type_of_ps, file=None):
         else:
             await event.edit("{}\n\n{}".format(type_of_ps, tmp))
 
-
-async def test(event):
-    try:
-        zylern = "speedtest --simple"
-        fetch = await asyncrunapp(
-            zylern,
-            stdout=asyncPIPE,
-            stderr=asyncPIPE,
-        )
-        stdout, stderr = await fetch.communicate()
-        result = str(stdout.decode().strip()) \
-            + str(stderr.decode().strip())
-        await event.reply("**" + result + "**")
-    except FileNotFoundError:
-        await event.reply("**Install speedtest-cli**")
-
-
 async def sysinfo(e):
     if str(e.sender_id) not in OWNER and event.sender_id !=DEV:
         return
